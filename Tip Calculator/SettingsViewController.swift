@@ -2,8 +2,8 @@
 //  SettingsViewController.swift
 //  Tip Calculator
 //
-//  Created by Hackintosh on 12/14/16.
-//  Copyright © 2016 Hackintosh. All rights reserved.
+//  Created by Huan Nguyen on 12/14/16.
+//  Copyright © 2016 Huan Nguyen. All rights reserved.
 //
 
 import UIKit

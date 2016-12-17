@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  Tip Calculator
 //
-//  Created by Hackintosh on 12/13/16.
-//  Copyright © 2016 Hackintosh. All rights reserved.
+//  Created by Huan Nguyen  on 12/13/16.
+//  Copyright © 2016 Huan Nguyen. All rights reserved.
 //
 
 import UIKit
@@ -73,9 +73,9 @@ class ViewController: UIViewController {
         tipLabel.textColor = .green
         totalLabel.textColor = .green
         tipSegment.tintColor = .yellow
-        billStatic.textColor = .blue
-        tipStatic.textColor = .blue
-        totalStatic.textColor = .blue
+        billStatic.textColor = .yellow
+        tipStatic.textColor = .yellow
+        totalStatic.textColor = .yellow
         billField.backgroundColor = UIColor.gray
         billField.textColor = .green
         tipAmountStatic.textColor = .yellow
