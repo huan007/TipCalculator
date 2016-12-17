@@ -10,6 +10,11 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var defaultAmountSegment: UISegmentedControl!
+    
+    @IBOutlet weak var colorSwitch: UISwitch!
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,15 +26,25 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func defaultValueChanged(_ sender: AnyObject?)
+    {
+        let choice = defaultAmountSegment.selectedSegmentIndex
+        defaults.set(choice, forKey: "DefaultChoice")
     }
-    */
+    @IBAction func colorModeChange(_ sender: Any) {
+        let mode = colorSwitch.isOn
+        defaults.set(mode, forKey: "isNight")
+        }
+	
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        let defaultChoice = defaults.integer(forKey: "DefaultChoice")
+        defaultAmountSegment.selectedSegmentIndex = defaultChoice
+        colorSwitch.isOn = defaults.bool(forKey: "isNight")
+        
+    }
 
+    
 }
